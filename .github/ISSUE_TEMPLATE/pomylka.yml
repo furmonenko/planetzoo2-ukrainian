@@ -1,0 +1,50 @@
+name: Помилка в перекладі
+description: Одруківка, незграбна фраза, напис не влазить чи обрізаний, лишилося англійською, квадратики замість літер
+title: "[Помилка] "
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Що не так
+      options:
+        - Одруківка чи граматика
+        - Незграбна фраза або помилка в значенні
+        - Напис не влазить або обрізаний
+        - Лишилося англійською
+        - Квадратики чи знаки питання замість літер
+        - Назва тварини, рослини чи ім’я
+        - Гра вилітає, не запускається чи переклад не з’являється
+        - Інше
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Знімок екрана
+      description: Перетягніть файл сюди. У Steam знімок робить клавіша F12.
+  - type: input
+    id: where
+    attributes:
+      label: Де це
+      description: Режим, вікно чи панель, що саме Ви робили.
+      placeholder: "кар’єра, сценарій у Швеції, панель тварини, вкладка добробуту"
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Що написано
+      description: Перепишіть текст або його шматок, щоб рядок можна було знайти пошуком.
+    validations:
+      required: true
+  - type: textarea
+    id: should
+    attributes:
+      label: Як, на Вашу думку, має бути
+      description: Необов’язково, але дуже допомагає.
+  - type: input
+    id: version
+    attributes:
+      label: Версія перекладу
+      description: Є в назві архіву, наприклад 1.0.0. Напишіть також, якщо гра оновлювалася після встановлення мода.
+      placeholder: "1.0.0, гра не оновлювалася"
